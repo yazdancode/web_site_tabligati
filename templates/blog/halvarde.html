@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa" dir="rtl">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>حلوارده</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+
+
+    <link rel="stylesheet" type="text/css" href={% static "blog/assets/css/fullpage.css" %} />
+    <link
+    rel="stylesheet"
+    href={% static "blog/assets/css/animate.css" %}
+  />
+    <link rel="stylesheet" type="text/css" href={% static "blog/assets/css/main.css" %} />
+
+
+    <!--[if IE]>
+    <script type="text/javascript">
+        let console = {
+            log: function () {
+            }
+        };
+    </script>
+    <![endif]-->
+</head>
+<body class="content">
+
+    <header>
+        <div class="container">
+            <img class="logo" src="{% static "blog/assets/images/logo1.png" %}" alt="">
+            <ul id="menu">
+                <li data-menuanchor="firstPage" class="active"><a href="{% url 'home_view_name' %}">خانه</a></li>
+                
+                <li data-menuanchor="secondPage"><a href="{% url 'home_view_name' %}">جاذبه گردشگری
+                    <img src="{% static "blog/assets/images/down.svg" %}" alt="">
+                </a>
+                    <ul>
+                        <li><a href={% url 'sarcheshme_view_name' %}>سرچشمه</a></li>
+                        <li><a href={% url 'abgarm_view_name' %}>آبگرم</a></li>
+                        <li><a href={% url 'atashkade_view_name' %}>آتشکده</a></li>
+                    </ul></li>
+                <li data-menuanchor="threedPage"><a href="{% url 'home_view_name' %}">
+                    غذای محلی
+                    <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                </a>
+                    <ul>
+                        <li><a href="{% url 'kaljosh_view_name' %}">کال جوش</a></li>
+                        <li><a href="{% url 'eshkene_view_name' %}">اشکنه</a></li>
+                        <li><a href="{% url 'patelepolo_view_name' %}">پتله پلو</a></li>
+                    </ul>
+                </li>
+                <li><a>
+                    سوغات
+                    <img src="{% static "blog/assets/images/down.svg" %}" alt="">
+                </a>
+                    <ul>
+                        <li><a href="{% url 'gol_view_name' %}">گل</a></li>
+                        <li><a href="{% url 'ardeshire_view_name' %}">ارده شیره</a></li>
+                        <li><a href="{% url 'halvarde_view_name' %}">حلوارده</a></li>
+                    </ul>
+                </li>
+                <li><a>
+                    اقامتگاه
+                    <img src="{% static "blog/assets/images/down.svg" %}" alt="">
+                </a>
+                    <ul>
+                        <li><a href="{% url 'noor_view_name' %}">نور</a></li>
+                        <li><a href={% url 'hotelaghsa_view_name' %}>اقصی</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'home_view_name' %}">ارتباط با ما</a></li>
+            </ul>
+            
+        </div>
+        
+    </header>
+
+
+    <div class="container x">
+        <div class="content-box">
+            <div class="cn-header">
+                <img src="{% static "blog/assets/images/Halva-Ardeh.jpg" %}" alt="">
+                <h2>حلوارده</h2>
+            </div>
+
+
+            <div class="content-body">
+                <p>
+                    حلوا ارده نوع خاص ارده اردکان یا بروجرد غذایی بسیار مقوی است که مصرف آن بیشتر به صورت صبحانه‌ است و مواد تشکیل دهنده آن عبارت‌اند از: ارده، شکر، تخم‌مرغ، هل و چوبک. در ساخت حلوا ارده از کنجد بریان سابیده که به آن ارده گفته می‌شود و به صورت مایع می‌باشد استفاده می‌شود. در قدیم که شکر نبوده از شیره خرما یا انگور و یا عسل استفاده می شده است.
+                    انواع
+حلوا ارده شکری:
+فرآورده‌ای است جامد و یکنواخت با ظاهری نخ‌دار که از پختن شکر، گلوکز مایع، اسید سیتریک و آب چوبک و سپس مخلوط کردن این شربت با ارده هم‌زمان با مالش به دست می‌آید، در تهیه این فرآورده می‌توان از برخی مواد افزودنی نیز استفاده نمود.
+
+حلوا ارده نرم:
+فرآورده‌ای است نرم و یکنواخت با ظاهری بدون نخ که از پختن شکر، گلوکز مایع، اسید سیتریک، آب چوبک و پودر سفیده تخم مرغ و سپس مخلوط کردن این شربت با ارده هم‌زمان با مالش به دست می‌آید. در تهیه این فرآورده می‌توان از برخی از مواد افزودنی استفاده نمود.
+
+حلوا ارده بدون شکر:
+فراورده‌ای است جامد و یکنواخت با ظاهر نخ‌دار ریز که از پختن قندهای الکی، اسید سیتریک و آب چوبک و سپس مخلوط کردن این شربت هم‌زمان با مالش به دست می‌آید، در تهیه این فرآورده نیز می‌توان از برخی از مواد افزودنی استفاده نمود.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

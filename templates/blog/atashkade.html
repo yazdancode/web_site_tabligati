@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>آتشکده</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords" content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/fullpage.css' %} '' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/main.css' %}" />
+
+    <!--[if IE]>
+    <script type="text/javascript">
+        let console = {
+            log: function () {
+            }
+        };
+    </script>
+    <![endif]-->
+</head>
+<body class="content">
+
+    <header>
+        <div class="container">
+            <img class="logo" src="{% static 'blog/assets/images/logo1.png' %}" alt="">
+            <ul id="menu">
+                <li data-menuanchor="firstPage" class="active">
+                    <a href="{% url 'home_view_name' %}">خانه</a>
+                </li>
+                <li data-menuanchor="secondPage">
+                    <a href="{% url 'home_view_name' %}">
+                        جاذبه گردشگری
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="Down arrow">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'sarcheshme_view_name' %}">سرچشمه</a></li>
+                        <li><a href="{% url 'abgarm_view_name' %}">آبگرم</a></li>
+                        <li><a href="{% url 'atashkade_view_name' %}">آتشکده</a></li>
+                    </ul>
+                </li>
+                <li data-menuanchor="treedPage">
+                    <a href="{% url 'home_view_name' %}">
+                        غذای محلی
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="Down arrow">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'kaljosh_view_name' %}">کال جوش</a></li>
+                        <li><a href="{% url 'atashkade_view_name' %}">اشکنه</a></li>
+                        <li><a href="{% url 'patelepolo_view_name' %}">پتله پلو</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>
+                        سوغات
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="Down arrow">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'gol_view_name' %}">گل</a></li>
+                        <li><a href="{% url 'ardeshire_view_name' %}">ارده شیره</a></li>
+                        <li><a href="{% url 'halvarde_view_name' %}">حلوارده</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>
+                        اقامتگاه
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="Down arrow">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'noor_view_name' %}">نور</a></li>
+                        <li><a href="{% url 'hotelaghsa_view_name' %}">اقصی</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact_us' %}">ارتباط با ما</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container x">
+        <div class="content-box">
+            <div class="cn-header">
+                <img src="{% static 'blog/assets/images/atash.jpg' %}" alt="">
+                <h2>آتشکده آتشکوه</h2>
+            </div>
+
+            <div class="content-body">
+                <p>
+                    یکی از مهم ترین آثار به جا مانده از دوران باستان در ایران که در نزدیکی شهر نیم ور در استان مرکزی قرار دارد.مورخان قدمت این بنا را به دوره ساسانیان مربوط میدانند
+                    بنای چهارطاقی آن شامل ستون های سنگی استوانه ای شکل است که بر روی هم استوار شده اند.این بنا دارای اتاق های سرپوشیده و محلی برای بر افروختن آتش بوده است.محلی که این آتشکده قرار دارد
+                    دارای طبیعت سبزی است اما اکنون این بنا در حال تخریب است این اثر در تاریخ 21 آبان1317 با شماره ثبت 311 به عنوان یکی از آثار ملی ایران به ثبت رسیده است.
+                </p>
+                <video src="{% static 'blog/assets/images/atashkade.mp4' %}" controls></video>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>محلات</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords" content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/fullpage.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog/assets/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/main.css' %}" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <img class="logo" src="{% static 'blog/assets/images/logo1.png' %}" alt="">
+            <ul id="menu">
+                <li data-menuanchor="firstPage" class="active">
+                    <a href={% url "home_view_name"%}>خانه</a>
+                </li>
+                <li data-menuanchor="secondPage">
+                    <a href="{% url 'home_view_name' %}">جاذبه گردشگری
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                    </a>
+                    <ul>
+                        abgarm
+                        <li><a href="{% url 'sarcheshme_view_name' %}">سرچشمه</a></li>
+                        <li><a href="{% url 'abgarm_view_name' %}">آبگرم</a></li>
+                        <li><a href="{% url 'atashkade_view_name' %}">آتشکده</a></li>
+                    </ul>
+                </li>
+                <li data-menuanchor="twoPage">
+                    <a href="{% url 'home_view_name' %}">غذای محلی
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                    </a>
+                    <ul>
+                        <li><a href={% url 'kaljosh_view_name' %}>کال جوش</a></li>
+                        <li><a href="{% url 'eshkene_view_name' %}">اشکنه</a></li>
+                        <li><a href="{% url 'patelepolo_view_name' %}">پتله پلو</a></li>
+                    </ul>
+                </li>
+                <li data-menuanchor="threePage"><a href="{% url 'home_view_name' %}">سوغات
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'gol_view_name' %}">گل</a></li>
+                        <li><a href="{% url 'ardeshire_view_name' %}">ارده شیره</a></li>
+                        <li><a href={% url 'halvarde_view_name' %}>حلوارده</a></li>
+                    </ul>
+                </li>
+                <li data-menuanchor="fourPage"><a  href="{% url 'home_view_name' %}">اقامتگاه
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'noor_view_name' %}">نور</a></li>
+                        <li><a href="{% url 'hotelaghsa_view_name' %}">اقصی</a></li>
+                    </ul>
+                </li>
+                <li data-menuanchor="fivePage"><a href="{% url 'contact_us' %}">ارتباط با ما</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="fullpage">
+        <div class="section active" id="section0">
+            <video id="myVideo" loop muted data-autoplay>
+                <source src="{% static 'blog/assets/images/bg.mp4' %}" type="video/mp4">
+                <source src="{% static 'blog/assets/images/bg.webm' %}" type="video/webm">
+            </video>
+            <div class="fp-vid-layer">
+                <div class="container">
+                    <div class="hero-obj">
+                        <div class="img">
+                            <img src="{% static 'blog/assets/images/hero.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="hero-content">
+                        <h1>محلات</h1>
+                        <h2 class="typewrite" data-period="2000" data-type='["هلند کوچک ایران", "شهر گل ها"]'>
+                            <span class="wrap"></span>
+                        </h2>
+                        <p>
+                            محلات یکی از شهرهای استان مرکزی است. این شهر آب و هوایی معتدل و دلچسب و آثار باستانی ارزشمند دارد. به همین دلیل مقصد بسیاری از گردشگران خوش ذوق است. محلات به هلند ایران نیز معروف است که در ادامه علت این نامگذاری را شرح می‌دهیم. اگر شما هم می‌خواهید به هلند ایران سفر کنید با ما همراه باشید تا به شما بگوییم که محلات کجاست و با دیدنی‌های این شهر، سوغات و شرایط اقامت در آن آشنا شویم.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section1">
+            <div class="slide" id="slide1">
+                <div class="container">
+                    <div class="jazebe-post sarch">
+                        <img src="{% static 'blog/assets/images/sarcheshme.jpg' %}" alt="">
+                        <h2>بوستان سرچشمه محلات</h2>
+                        <div class="jaz-content">
+                            <p>
+                                سرچشمه محلات یکی از پرآب ترین چشمه های استان مرکزیه و در بلندترین نقطه مرتفع شهر محلات قرار گرفته. این چشمه ضمن اینکه آب آشامیدنی و کشاورزی منطقه رو تامین می کنه از جاذبه های سیاحتی بسیار با ارزشی هم برخورداره. به طوری که از دیر باز مورد توجه جهانگردان بوده. گفته می شه که علت به وجود آمدن شهر محلات، وجود این چشمه بوده. وجود این سرچشمه باعث شده که در کنار آن پارک زیبایی شکل بگیره. این پارک یکی از مراکز جذاب گردشگری در تابستان به شمار میره. آب نمای زیبا، درختان سر به فلک کشیده، چنار کهنسال و ارتفاعات صخره ای مشرف به این چشمه، در کنار هوای دلپذیر و مطبوع آن، همه ساله در فصل تابستان علاقه مندان بسیاری رو از دور و نزدیک به این سمت فرا می خونه.
+                            </p>
+                        </div>
+                        <a class="jz-more" href="{% url 'sarcheshme_view_name' %}">اطلاعات بیشتر</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide active" id="slide2">
+                <div class="container">
+                    <div class="jazebe-post abg">
+                        <img src="{% static 'blog/assets/images/bgarm.jpg' %}" alt="">
+                        <h2>آبگرم محلات</h2>
+                        <div class="jaz-content">
+                            <p>
+                                در میان تمام چشمه‌های آب گرم ایران، چشمه ‌های آب گرم محلات از نظر وجود مقادیر فراوان گاز‏رادون بسیار مورد توجه است، چرا که این گاز را برای بهبود بیماری‌های کلیوی بسیار مفید می‌دانند. از ‏دیگر خواص آب‎ ‎گرم محلات می‌توان به بهبود مشکلات پوستی روماتیسم بیماری کبدی، صفراوی و ‏دستگاه گوارش اشاره کرد. به همین دلیل، سالانه مسافران زیادی به محلات سفر می‌کنند و همچنان که ‏از دیدنی ‌های محلات لذت می‌برند، خواص درمانی چشمه‌ های آبگرم محلات را نیز تجربه می‌کنند. از ‏آنجایی‌که دمای آب در این چشمه‌ها بسیار بالاست و گاه به بالای 50 درجه هم می‌رسد، استحمام در ‏این مکان‌ها برای افرادی که دارای بیماری قلبی عروقی هستند توصیه نمی‌شود. از میان تمام چشمه‌های ‏آب گرم محلات، مجتمع جهانگردی آبگرم محلات، دارای امکانات مناسب برای ‏استفاده عموم است. چرا ‏که دارای دو مجموعه زنانه و مردانه است که هر یک استخر شنا، وان و دوش‌های ‏انفرادی دارند. آدرس ‏آب گرم محلات در جاده دودهک خورهه است. ‏
+                            </p>
+                        </div>
+                        <a class="jz-more" href="{% url 'sarcheshme_view_name' %}">اطلاعات بیشتر</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide3">
+                <div class="container">
+                    <div class="jazebe-post atash">
+                        <img src="{% static 'blog/assets/images/atash.jpg' %}" alt="">
+                        <h2>آتشکده آتشکوه</h2>
+                        <div class="jaz-content">
+                            <p>
+                                آتشکده آتشکوه از قدیمی‌ترین و مهم‌ترین آتشکده‌های زرتشتیان بوده که در استان مرکزی قرار داره و یکی از مهم‌ترین جاهای دیدنی محلات به شمار می‌آید. این آتشکده یکی از بناهای تاریخی به جا مانده از دوران ساسانیانه که از آثار ملی ایران هم به شمار میاد. با توجه به یافته‌های به‌ دست اومده در محوطه‌ی این بنا، آتشکده‌ی آتشکوه از آتشکده‌های مهم در دوران ساسانی بوده که در محل آن معبدی به جا مونده. در این منطقه نشانه‌های دوران‌های بعد از دوره ساسانی هم دیده می‌شه و مشخصه که این مکان تا دوره اسلامی هم رونق داشته است.
+                            </p>
+                        </div>
+                        <a class="jz-more" href="{% url 'atashkade_view_name' %}">اطلاعات بیشتر</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{% static 'blog/assets/js/fullpage.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'blog/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

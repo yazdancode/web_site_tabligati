@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ارده شیره</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords" content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/fullpage.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog/assets/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/main.css' %}" />
+
+    <!--[if IE]>
+    <script type="text/javascript">
+        let console = {
+            log: function () {
+            }
+        };
+    </script>
+    <![endif]-->
+</head>
+
+<body class="content">
+
+    <header>
+        <div class="container">
+            <img class="logo" src="{% static 'blog/assets/images/logo1.png' %}" alt="Logo">
+            <ul id="menu">
+                <li data-menuanchor="firstPage" class="active"><a href={% url 'home_view_name' %}>خانه</a></li>
+                
+                <li data-menuanchor="secondPage"><a href="{% url 'home_view_name' %}">جاذبه گردشگری
+                    <img src="{% static 'blog/assets/images/down.svg' %}" alt="Dropdown Icon">
+                </a>
+                    <ul>
+                        <li><a href="{% url 'sarcheshme_view_name' %}">سرچشمه</a></li>
+                        <li><a href="{% url 'abgarm_view_name' %}">آبگرم</a></li>
+                        <li><a href="{% url 'atashkade_view_name' %}">آتشکده</a></li>
+                    </ul>
+                </li>
+                <li data-menuanchor="threedPage"><a href="{% url 'home_view_name' %}">غذای محلی
+                    <img src="{% static 'blog/assets/images/down.svg' %}" alt="Dropdown Icon">
+                </a>
+                    <ul>
+                        <li><a href="{% url 'kaljosh_view_name' %}">کال جوش</a></li>
+                        <li><a href="{% url 'eshkene_view_name' %}">اشکنه</a></li>
+                        <li><a href="{% url 'patelepolo_view_name' %}">پتله پلو</a></li>
+                    </ul>
+                </li>
+                <li><a>سوغات
+                    <img src="{% static 'blog/assets/images/down.svg' %}" alt="Dropdown Icon">
+                </a>
+                    <ul>
+                        <li><a href="{% url 'gol_view_name' %}">گل</a></li>
+                        <li><a href="{% url 'ardeshire_view_name' %}">ارده شیره</a></li>
+                        <li><a href="{% url 'halvarde_view_name' %}">حلوارده</a></li>
+                    </ul>
+                </li>
+                <li><a>اقامتگاه
+                    <img src="{% static 'blog/assets/images/down.svg' %}" alt="Dropdown Icon">
+                </a>
+                    <ul>
+                        <li><a href="{% url 'noor_view_name' %}">نور</a></li>
+                        <li><a href="{% url 'hotelaghsa_view_name' %}">اقصی</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact_us' %}">ارتباط با ما</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container x">
+        <div class="content-box">
+            <div class="cn-header">
+                <img src="{% static 'blog/assets/images/aedeeshire.jpeg' %}" alt="ارده شیره">
+                <h2>ارده شیره</h2>
+            </div>
+
+            <div class="content-body">
+                <p>
+                    ارده و شیره یکی از مقوی ترین و خوشمزه ترین مواد غذایی است که به عنوان صبحانه یا میان وعده مصرف می شود.
+                    <br><br>
+                    دو ماده اصلی تشکیل دهنده اصلی این خوراکی، کنجد و دوشاب(شیره انگور) است. ارده و شیره هر کدام به تنهایی برای سلامتی مفید هستند و با ترکیب با هم خواصشان معجزه آسا می شود.
+                    <br><br>
+                    ارده مایعی است که از کنجد نرم پوست کنده بریان و نرم کوبیده تهیه شده و روغن آن جدا نشده باشد. برای تهیه ارده و شیره این خمیر کنجد له شده را با شیره میوه های مختلف مانند انگور، خرما و انجیر مخلوط می کنند اما شکل رایج تر آن، ترکیب با شیره انگور اسـت. برای پیشگیری از شیرین شدن بیش ازحد، از مقدار کمتری شیره استفاده می کنند.
+                    <br><br>
+                    ارده و شیره کاملاً گیاهی و خالی از گلوتن است و دارای مواد مغذی فراوانی مانند «آمینواسیدها و چربی های سالم»، «فیبر»، «پروتئین»، «انواع ویتامین بخصوص ویتامین گروه ب»، «تیامین»، «منیزیم»، «مس»، «فسفر»، «منگنز»، «آهن» و «زینک» است.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

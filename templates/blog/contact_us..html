@@ -1,0 +1,31 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <title>{% trans "تماس با ما" %}</title>
+</head>
+<body>
+<div class="contact-form">
+    <h1>{% trans "تماس با ما" %}</h1>
+    <p>{% trans "خیالتان راحت باشد، فقط کارشناسان ما این اطلاعات را می‌بینند." %}</p>
+    <form id="contactForm" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% trans "ارسال" %}</button>
+    </form>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('{% trans "فرم با موفقیت ارسال شد!" %}');
+            this.reset();
+        });
+    });
+</script>
+</body>
+</html>

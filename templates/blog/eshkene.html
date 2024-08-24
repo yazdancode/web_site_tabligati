@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fa">
+
+<head>
+    <meta charset="utf-8" />
+    <title>اشکنه</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords" content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/fullpage.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog/assets/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/assets/css/main.css' %}" />
+
+    <!--[if IE]>
+    <script type="text/javascript">
+        let console = {
+            log: function () {
+            }
+        };
+    </script>
+    <![endif]-->
+</head>
+<body class="content">
+
+    <header>
+        <div class="container">
+            <img class="logo" src="{% static 'blog/assets/images/logo1.png' %}" alt="">
+            <ul id="menu">
+                <li data-menuanchor="firstPage" class="active"><a href="{% url 'home_view_name' %}">خانه</a></li>
+                <li data-menuanchor="secondPage">
+                    <a href="{% url 'home_view_name' %}">جاذبه گردشگری
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'sarcheshme_view_name' %}">سرچشمه</a></li>
+                        <li><a href="{% url 'abgarm_view_name' %}">آبگرم</a></li>
+                        <li><a href="{% url 'atashkade_view_name' %}">آتشکده</a></li>
+                    </ul>
+                </li>
+                <li data-menuanchor="threedPage">
+                    <a href="{% url 'home_view_name' %}">غذای محلی
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'kaljosh_view_name' %}">کال جوش</a></li>
+                        <li><a href="{% url 'eshkene_view_name' %}">اشکنه</a></li>
+                        <li><a href="{% url 'patelepolo_view_name' %}">پتله پلو</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>سوغات
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'gol_view_name' %}">گل</a></li>
+                        <li><a href="{% url 'ardeshire_view_name' %}">ارده شیره</a></li>
+                        <li><a href="{% url 'halvarde_view_name' %}">حلوارده</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>اقامتگاه
+                        <img src="{% static 'blog/assets/images/down.svg' %}" alt="">
+                    </a>
+                    <ul>
+                        <li><a href="{% url 'noor_view_name' %}">نور</a></li>
+                        <li><a href="{% url 'hotelaghsa_view_name' %}">اقصی</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'contact_us' %}">ارتباط با ما</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container x">
+        <div class="content-box">
+            <div class="cn-header">
+                <img src="{% static 'blog/assets/images/eshkene.jpg' %}" alt="">
+                <h2>اشکنه</h2>
+            </div>
+
+            <div class="content-body">
+                <p>
+                    مرحله اول
+                    ابتدا پیاز را به صورت نگینی خرد می کنیم سپس به همراه مقداری روغن در یک قابلمه مناسب تفت می دهیم تا پیاز نرم و سبک شود ، سپس مقداری زردچوبه و فلفل سیاه اضافه می کنیم و تفت دادن را ادامه می دهیم تا پیاز و زردچوبه یکدست شوند.
+                    مرحله دوم
+                    در این مرحله رب گوجه فرنگی را به قابلمه اضافه می کنیم و خوب تفت می دهیم تا رب گوجه فرنگی به طور کامل سرخ شود ، این کار باعث می شود رنگ اشکنه ما بهتر شود ضمن اینکه طعم و بوی خامی رب گوجه فرنگی نیز گرفته شود.
+                    مرحله سوم
+                    پس از اینکه رب گوجه فرنگی سرخ شد شنبلیله خشک شده را با دست خرد می کنیم و به قابلمه می افزاییم و کمی تفت می دهیم با دیگر مواد مخلوط شود. در ادامه آرد را کم‌کم اضافه می کنیم و به صورت متداوم مواد را مخلوط می کنیم.
+                    مرحله چهارم
+                    در این مرحله سیب زمینی را به صورت حبه قندی خرد می کنیم و به قابلمه اضافه می کنیم. سیب زمینی را هم به همراه دیگر مواد یکی دو دقیقه تفت می دهیم سپس ۳ لیوان آب جوش به قابلمه اضافه می کنیم و در قابلمه را می گذاریم تا سسب زمینی ها بپزند.
+                    مرحله پنجم
+                    پس از اینکه مواد اشکنه به طور کامل پخت تخم مرغ را یک به یک به قابلمه اضافه می کنیم و به صورت متداوم هم می زنیم تا خودشان را بگیرند و سفت شوند. اشکنه ما اماده سرو است می توانید به صورت سنتی آنرا با نان ترید کرده و میل نمایید.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="2">مواد لازم برای 4 نفر</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>سیب زمینی</td>
+                            <td>۲ عدد متوسط</td>
+                        </tr>
+                        <tr>
+                            <td>پیاز</td>
+                            <td>۱ عدد بزرگ</td>
+                        </tr>
+                        <tr>
+                            <td>تخم مرغ</td>
+                            <td>۴ عدد</td>
+                        </tr>
+                        <tr>
+                            <td>رب گوجه فرنگی</td>
+                            <td>۱ قاشق غذاخوری</td>
+                        </tr>
+                        <tr>
+                            <td>شنبلیله خشک شده</td>
+                            <td>۱ قاشق غذاخوری</td>
+                        </tr>
+                        <tr>
+                            <td>آرد</td>
+                            <td>۲ قاشق غذاخوری</td>
+                        </tr>
+                        <tr>
+                            <td>نمک و فلفل سیاه</td>
+                            <td>به اندازه کافی</td>
+                        </tr>
+                        <tr>
+                            <td>زردچوبه و روغن</td>
+                            <td>به اندازه کافی</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
