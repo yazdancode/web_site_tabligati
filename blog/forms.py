@@ -8,20 +8,18 @@ class ContactForm(forms.ModelForm):
     email_validator = EmailValidator()
     phone_validator = Phone_Number()
     fullname = forms.CharField(
-        label="نام و نام خانوادگی",
         widget=forms.TextInput(attrs={"class": "contact-form"}),
     )
     email = forms.EmailField(
-        label="ایمیل", widget=forms.TextInput(attrs={"class": "contact-form"})
+         widget=forms.TextInput(attrs={"class": "contact-form"})
     )
     phone_number = forms.CharField(
-        label="تلفن همراه", widget=forms.TextInput(attrs={"class": "contact-form"})
+         widget=forms.TextInput(attrs={"class": "contact-form"})
     )
     subject = forms.CharField(
-        label="موضوع", widget=forms.TextInput(attrs={"class": "contact-form"})
+        widget=forms.TextInput(attrs={"class": "contact-form"})
     )
     message = forms.CharField(
-        label="پیام خود را برای ما بنویسید",
         widget=forms.Textarea(attrs={"class": "contact-form"}),
     )
 
