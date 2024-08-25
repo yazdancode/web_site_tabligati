@@ -37,7 +37,7 @@ class ContactForm(forms.ModelForm):
     
     def clean_phone_number(self):
         phone = self.cleaned_data.get("phone_number")
-        return self.phone_number.validate(phone)
+        return self.phone_validator.validate(phone)
     
     def clean(self):
         cleaned_data = super().clean()
